@@ -17,6 +17,9 @@
 <!-- 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA             -->
 <!--                                                                    -->
 <!--                 Sipp default 'uac' scenario.                       -->
+<!--                 with [auto_media_port] range                       -->
+<!--  -min_rtp_port    : Minimum port number for RTP socket range.      -->
+<!--  -max_rtp_port    : Maximum port number for RTP socket range.      -->
 <!--                                                                    -->
 
 <scenario name="Basic Sipstone UAC">
@@ -45,7 +48,7 @@
       s=-
       c=IN IP[media_ip_type] [media_ip]
       t=0 0
-      m=audio [media_port] RTP/AVP 0
+      m=audio [auto_media_port] RTP/AVP 0
       a=rtpmap:0 PCMU/8000
 
     ]]>
